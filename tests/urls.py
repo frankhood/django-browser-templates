@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals, absolute_import
-
-from django.conf.urls import url, include
 from django.contrib import admin
+from django.urls import include, path, re_path
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('skels_manager.urls', namespace='skels_manager')),
+    re_path(r"^admin/", admin.site.urls),
+    path("skels/", include("skels_manager.urls", namespace="skels_manager")),
 ]
