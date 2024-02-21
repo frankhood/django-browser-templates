@@ -44,7 +44,7 @@ Add django-browser-templates's URL patterns:
 
     urlpatterns = [
         ...
-        url(r"^skels/", include(skels_manager_urls))
+        path("skels/", include(skels_manager_urls))
         ...
     ]
 
